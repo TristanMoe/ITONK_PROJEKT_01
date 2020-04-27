@@ -1,13 +1,24 @@
 import {Component, Prop, Vue } from 'vue-property-decorator';
+import ApiService, { User } from '../ApiService';
 
 @Component
 export default class CreateUser extends Vue {
-    firstName = "Tristan";
-    lastName = "Moeller"
-
-    // Function template 
-    get fullname(){
-        return this.firstName + " " + this.lastName;
+    user: User = {
+        userId: '',
+        password: ''
     }
+    error = '';
+
+    apiService = new ApiService(); 
+    
+    signUp() {
+        if (this.user.userId !== '' || this.user.password !== '') {
+            this.apiService.createUser(this.user);
+            this.error = '';
+        } else {
+            this.error = 'Please input all information before submitting'            
+        }
+    }   
+
     
 }

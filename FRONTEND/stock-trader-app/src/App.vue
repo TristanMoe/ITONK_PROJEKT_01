@@ -16,25 +16,28 @@
 
     <router-view/>
 
+  <!--
     <footer class="font-small bg-success footer">
-      <!-- Copyright -->  
       <div class="footer-copyright text-center py-3 copyright">© 2020 Copyright:
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Cool-Kids.com</a>
       </div>
-      <!-- Copyright -->
 
     </footer>
+  -->
+
   </div>
 </template>
 
 <style>
+html, body {
+  height: 100%;
+  background-color: #d2f8d2;
+}
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: absolute; 
+  bottom: 0; 
   width: 100%;
-  height: 2.5rem;           /* Footer height */ 
-  padding-bottom: 10px;
 }
 
 .navlinkColor {
@@ -45,20 +48,20 @@
   color: white
 }
 
-.colorapp {
-  height: 100%;
-  background-color: #d2f8d2;
-  color: #d2f8d2;
-}
 
 #app {
-  min-height: 100vh;
   height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #d2f8d2;
+}
+
+.colorapp {
+  height: 100%;
+  background-color: #d2f8d2;
+  color: #d2f8d2;
 }
 
 #nav {
